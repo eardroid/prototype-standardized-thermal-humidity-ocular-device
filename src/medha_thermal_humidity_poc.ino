@@ -1,27 +1,15 @@
-/*
-  Prototype of Standardized Thermal/Humidity Ocular Device for Dry Eye Therapy
-  ESP32-S3 / Arduino sketch
-
-  Bench-test controller only. This sketch is not a medical-device controller.
-  The high-current heater and atomizer paths are disabled by default until
-  their power stages, loads, heatsinking, and safety hardware are verified.
-*/
-
 #include <Arduino.h>
 #include <DHT.h>
 
 constexpr uint8_t DHT_PIN = 17;
 constexpr uint8_t BUZZER_PIN = 4;
-constexpr uint8_t SWITCH_PIN = 15;       // active LOW, INPUT_PULLUP
+constexpr uint8_t SWITCH_PIN = 15;
 constexpr uint8_t HEATER_PIN = 18;
 constexpr uint8_t ATOMIZER_PIN = 19;
-
 constexpr uint8_t DHT_TYPE = DHT11;
-constexpr float TEMP_WARNING_C = 35.0f;  // demonstration warning only
-constexpr float TEMP_ALARM_C = 40.0f;    // demonstration interlock only
+constexpr float TEMP_WARNING_C = 35.0f;
+constexpr float TEMP_ALARM_C = 40.0f;
 constexpr unsigned long SENSOR_PERIOD_MS = 2000;
-
-// Keep these false until each external power path has been checked safely.
 constexpr bool HEATING_AVAILABLE = false;
 constexpr bool ATOMIZER_AVAILABLE = false;
 
@@ -42,7 +30,9 @@ void beep(uint8_t count, unsigned int durationMs) {
     digitalWrite(BUZZER_PIN, HIGH);
     delay(durationMs);
     digitalWrite(BUZZER_PIN, LOW);
-    if (i + 1 < count) delay(120);
+    if (i + 1 < count) {
+      delay(120);
+    }
   }
 }
 
@@ -65,16 +55,13 @@ void printStatus(float temperatureC, float humidityPct) {
 
 void setup() {
   Serial.begin(115200);
-
   pinMode(SWITCH_PIN, INPUT_PULLUP);
   pinMode(BUZZER_PIN, OUTPUT);
   pinMode(HEATER_PIN, OUTPUT);
   pinMode(ATOMIZER_PIN, OUTPUT);
   allOutputsOff();
   digitalWrite(BUZZER_PIN, LOW);
-
   dht.begin();
-
   Serial.println();
   Serial.println("======================================");
   Serial.println("STANDARDIZED THERMAL/HUMIDITY OCULAR DEVICE POC");
@@ -139,7 +126,6 @@ void loop() {
     return;
   }
 
-  // These are intentionally gated by compile-time availability flags.
   digitalWrite(HEATER_PIN, HEATING_AVAILABLE ? HIGH : LOW);
   digitalWrite(ATOMIZER_PIN, ATOMIZER_AVAILABLE ? HIGH : LOW);
 }
