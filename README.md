@@ -43,17 +43,13 @@ The following two photographs are intentionally labeled separately: the first is
 
 ![IRF520 MOSFET module](images/mosfet-module.jpeg)
 
+![TEC1-12706 Peltier module](images/peltier-module.jpeg)
+
 ### Ultrasonic atomizer and driver
 
-These photographs show the atomizer discs and driver board from the troubleshooting work. The first unit available to the team was not working, so these are documented as hardware photographs rather than proof of mist output.
+This photograph shows the complete atomizer/mist module from the troubleshooting work. The first unit available to the team was not working, so it is documented as a hardware photograph rather than proof of mist output.
 
 ![Ultrasonic atomizer parts](images/ultrasonic-atomizer-parts.jpeg)
-
-![Atomizer on the bench](images/atomizer-on-bench.jpeg)
-
-![Atomizer driver front](images/atomizer-driver-front.jpeg)
-
-![Atomizer driver back](images/atomizer-driver-back.jpeg)
 
 ## Hardware used
 
