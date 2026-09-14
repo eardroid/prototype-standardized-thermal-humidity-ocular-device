@@ -23,6 +23,14 @@ DHT11 ──> ESP32-S3 ──> MOSFET driver ──> external load supply ──
    └────────────────> temperature + humidity status
 ```
 
+## The first design we imagined
+
+Before the bench prototype took shape, we drew this concept after receiving the problem statement. It shows the more complete product we initially wanted: a goggle-like enclosure, a fan-assisted mist path, Peltier heating, absorbent pads, a power switch, and the control electronics arranged as one integrated device.
+
+![Initial concept sketch](images/initial-concept-sketch.jpeg)
+
+The final prototype did not quite live up to this drawing — a familiar side effect of trying to design, source, wire, debug, and demonstrate a thermal-humidity device in a very short hackathon. The sketch was ambitious; the bench build was the honest version of what we could make work with the parts and time available. We are still proud of the result, including the compromises and the things that did not work on the first attempt. This concept remains a useful target for a future iteration, when the enclosure, thermal path, mist delivery, and safety systems can be developed properly.
+
 ## Photographs
 
 ![Prototype overview](images/prototype-overview.jpeg)
