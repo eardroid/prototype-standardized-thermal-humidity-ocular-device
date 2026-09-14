@@ -1,4 +1,4 @@
-# System overview
+# System overview — Prototype of Standardized Thermal/Humidity Ocular Device
 
 The prototype follows a simple sense–decide–actuate loop:
 

@@ -1,5 +1,5 @@
 /*
-  MEDHA thermal-humidity ocular prototype
+  Prototype of Standardized Thermal/Humidity Ocular Device for Dry Eye Therapy
   ESP32-S3 / Arduino sketch
 
   Bench-test controller only. This sketch is not a medical-device controller.
@@ -77,7 +77,7 @@ void setup() {
 
   Serial.println();
   Serial.println("======================================");
-  Serial.println("MEDHA THERMAL-HUMIDITY POC");
+  Serial.println("STANDARDIZED THERMAL/HUMIDITY OCULAR DEVICE POC");
   Serial.println("ESP32-S3 CONTROLLER ONLINE");
   Serial.println("======================================");
   Serial.println("Software interlocks are for bench testing only.");

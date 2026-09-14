@@ -1,4 +1,4 @@
-# Prototype of thermal-humidity ocular device for dry-eye therapy
+# Prototype of Standardized Thermal/Humidity Ocular Device for Dry Eye Therapy
 
 An early bench-test proof of concept developed during MEDHA Medical Device Hackathon 2026. The project explored a small ESP32-controlled chamber for demonstrating temperature and humidity sensing around a closed-eye region.
 
@@ -34,6 +34,26 @@ DHT11 ──> ESP32-S3 ──> MOSFET driver ──> external load supply ──
 ![MOSFET and breadboard connections](images/breadboard-and-mosfet.jpeg)
 
 ![Bench assembly](images/bench-assembly.jpeg)
+
+### Power bench and switching hardware
+
+The following two photographs are intentionally labeled separately: the first is the laboratory DC power supply, and the second is the IRF520 MOSFET module close-up.
+
+![Laboratory DC power supply](images/power-supply.jpeg)
+
+![IRF520 MOSFET module](images/mosfet-module.jpeg)
+
+### Ultrasonic atomizer and driver
+
+These photographs show the atomizer discs and driver board from the troubleshooting work. The first unit available to the team was not working, so these are documented as hardware photographs rather than proof of mist output.
+
+![Ultrasonic atomizer parts](images/ultrasonic-atomizer-parts.jpeg)
+
+![Atomizer on the bench](images/atomizer-on-bench.jpeg)
+
+![Atomizer driver front](images/atomizer-driver-front.jpeg)
+
+![Atomizer driver back](images/atomizer-driver-back.jpeg)
 
 ## Hardware used
 
