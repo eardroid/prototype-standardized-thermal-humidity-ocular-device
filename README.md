@@ -1,4 +1,4 @@
-# MEDHA thermal-humidity ocular prototype
+# Prototype of thermal-humidity ocular device for dry-eye therapy
 
 An early bench-test proof of concept developed during MEDHA Medical Device Hackathon 2026. The project explored a small ESP32-controlled chamber for demonstrating temperature and humidity sensing around a closed-eye region.
 
