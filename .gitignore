@@ -1,0 +1,20 @@
+# Arduino build output
+*.elf
+*.bin
+*.hex
+*.map
+*.eep
+
+# PlatformIO and editor files
+.pio/
+.vscode/
+
+# Local secrets and environment files
+secrets.h
+.env
+
+# OS and temporary files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
